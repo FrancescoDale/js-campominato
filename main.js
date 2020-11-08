@@ -52,18 +52,21 @@ while (gameOver==false) {
         do {
             // prende un numero dal prompt compreso tra 1 e il numero di caselle del campo minato
             var input = parseInt(prompt('Inserisci un numero tra 1 e ' + gameNumbers));
+            // controllo per evitare che il numero inserito sia già stato inserito prima
+
+            if(inputNumbers.indexOf(input) === -1) {
+                inputNumbers.push(input); // push nell'array dei numeri inserriti
+            }
+            else {
+                console.log('scegli un numero diverso, questo è già stato inserito!');
+                input = 0; // azzera input
+            }
+        }
+        // ripete il ciclo finchè non viene inserito un numero che rispetta le condizioni di essere compreso nell'intervallo accettato
+        while ((input > gameNumbers) || (input < 0) ) {
+
         }
 
-        // controllo per evitare che il numero inserito sia già stato inserito prima
-
-        if(inputNumbers.indexOf(input) === -1) {
-                    inputNumbers.push(input); // push nell'array dei numeri inserriti
-                }
-                else {
-                    console.log('scegli un numero diverso, questo è già stato inserito!');
-                    input = 0; // azzera input
-
-                }
     }
 
 
