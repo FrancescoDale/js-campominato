@@ -47,6 +47,14 @@ while (gameOver==false) {
         console.log(' Game Over!')
     }
 
+    // se gameOver è ancora false, il gioco continua
+    else {
+        do {
+            // prende un numero dal prompt compreso tra 1 e il numero di caselle del campo minato
+            var input = parseInt(prompt('Inserisci un numero tra 1 e ' + gameNumbers));
+        }
+    }
+
 
 
 }
