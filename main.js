@@ -41,8 +41,12 @@ console.log(randomNumbers);
 
 // ciclo che si interrompe solo quando gameOver assume valore true
 
-while (gameOver==true) {
-    console.log(' Game Over!')
+while (gameOver==false) {
 
-    
+    if (gameOver==true) {
+        console.log(' Game Over!')
+    }
+
+
+
 }
