@@ -63,8 +63,9 @@ while (gameOver==false) {
             }
         }
         // ripete il ciclo finchè non viene inserito un numero che rispetta le condizioni di essere compreso nell'intervallo accettato
-        while ((input > gameNumbers) || (input < 0) ) {
-
+        while ((input > gameNumbers) || (input < 1) ) {
+            //controllo
+            console.log(input);
         }
 
     }
