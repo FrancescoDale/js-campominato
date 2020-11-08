@@ -55,7 +55,7 @@ while (gameOver==false) {
             // controllo per evitare che il numero inserito sia già stato inserito prima
 
             if(inputNumbers.indexOf(input) === -1) {
-                inputNumbers.push(input); // push nell'array dei numeri inserriti
+                inputNumbers.push(input); // push nell'array dei numeri inseriti
             }
             else {
                 console.log('scegli un numero diverso, questo è già stato inserito!');
@@ -63,13 +63,23 @@ while (gameOver==false) {
             }
         }
         // ripete il ciclo finchè non viene inserito un numero che rispetta le condizioni di essere compreso nell'intervallo accettato
-        while ((input > gameNumbers) || (input < 1) ) {
+        while (input > gameNumbers || input < 1) {
             //controllo
             console.log(input);
+
+            // confronto i numeri inseriti con le mine generate casualmente
+
+            for (var i = 0; i < randomNumbers.length; i++) {
+
+                if(randomNumbers[i] == input) {
+                    gameOver = true;
+                    console.log('Game Over!');
+                }
         }
 
+
+
+
     }
-
-
 
 }
